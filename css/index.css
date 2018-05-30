@@ -1,0 +1,155 @@
+html, body {
+	height: 100%;
+}
+
+nav {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: 1fr auto;
+	min-width: 0;
+	min-height: 0;
+	z-index: 1;
+	font-family: 'Chelsea Market', cursive;
+	letter-spacing: .125rem;
+	color: rgb(0, 0, 0);
+}
+
+#logo {
+	grid-column: 1/5;
+	grid-row: 1;
+	justify-self: center;
+	width: 100%;
+	max-height: 100px;
+	z-index: 1;
+	padding-top: .5rem;
+	/*border-bottom: 1px solid rgb(225, 225, 225);*/
+}
+
+.navLinks {
+	justify-self: center;
+	padding: 1rem 0;
+	text-decoration: none;
+	z-index: 1;
+}
+
+.navLinks:active, .navLinks:visited {
+	color: rgb(0, 0, 0);
+}
+
+.navLinks:hover {
+	color: rgb(125, 25, 25);
+}
+
+a.about {
+	grid-column: 1/2;
+	grid-row: 1;
+	z-index: 1;
+	padding-top: 1rem;
+}
+
+.icons {
+	grid-column: 4/5;
+	grid-row: 1;
+	justify-self: center;
+	z-index: 1;
+	padding-top: 1rem;
+}
+
+.icons > img {
+	width: 29px;
+	height: 29px;
+}
+
+.icons > img:first-child {
+	padding-right: .5rem;
+}
+
+a.home {
+	grid-column: 1/2;
+	grid-row: 2;
+}
+
+a.recipes {
+	grid-column: 2/3;
+	grid-row: 2;
+}
+
+a.techniques {
+	grid-column: 3/4;
+	grid-row: 2;
+}
+
+a.photography {
+	grid-column: 4/5;
+	grid-row: 2;
+}
+
+.landingPhoto {
+	margin-top: -156px;
+	background-image: url("../assets/scone.jpg");
+	height: 100%;
+	z-index: -1;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media only screen and (max-width: 500px) {
+	nav {
+		grid-template-rows: repeat(8, auto);
+	}
+
+	#logo {
+		margin-top: 2rem;
+		padding-bottom: 3rem;
+		border-bottom: none;
+	}
+
+	a.about {
+		grid-column: 1/5;
+		grid-row: 2;
+		justify-self: center;
+		padding-left: 0;
+	}
+
+	a.home {
+		grid-column: 1/5;
+		grid-row: 3;
+	}
+
+	a.recipes {
+		grid-column: 1/5;
+		grid-row: 4;
+	}
+
+	a.techniques {
+		grid-column: 1/5;
+		grid-row: 5;
+	}
+
+	a.photography {
+		grid-column: 1/5;
+		grid-row: 6;
+	}
+
+	.navLinks, .icons {
+		padding: 2rem 0;
+	}
+
+	.icons {
+		grid-column: 1/5;
+		grid-row: 7;
+		justify-self: center;
+	}
+
+	.icons > img {
+		width: 20px;
+		height: 20px;
+	}
+
+	.landingPhoto {
+		margin-top: -658px;
+		opacity: 0.75;
+	}
+}
